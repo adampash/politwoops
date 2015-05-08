@@ -36,7 +36,7 @@ class Admin::TweetsController < Admin::AdminController
 
   # approve or unapprove a tweet, mark it as reviewed either way
   def review
-    
+
     review_message = (params[:review_message] || "").strip
 
     if ["Approve", "Unapprove"].include?(params[:commit])

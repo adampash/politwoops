@@ -90,7 +90,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.18.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -179,7 +178,6 @@ DEPENDENCIES
   mysql2
   oauth
   paperclip (= 2.7.0)
-  pg
   pry
   pry_debug
   rails (= 3.2.11)

@@ -1,5 +1,9 @@
 For local dev w/mysql, need to run mysql.server start
 
+To push live, `git push live`
+
+This will deploy to production, run bundle install, and restart unicorn on the server. All migrations will need to be done manually.
+
 Setting up the app
 ==================
 

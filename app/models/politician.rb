@@ -19,21 +19,21 @@ class Politician < ActiveRecord::Base
   belongs_to :party
 
   belongs_to :office
-    
+
   belongs_to :account_type
 
   has_many :tweets
   has_many :deleted_tweets
- 
+
   has_many :account_links
-  has_many :links, :through => :account_links 
-   
+  has_many :links, :through => :account_links
+
   #default_scope :order => 'user_name'
 
   scope :active, :conditions => ["status = 1 OR status = 4"]
   scope :collecting, :conditions => { :status => [CollectingAndShowing, CollectingNotShowing] }
   scope :showing, :conditions => { :status => [CollectingAndShowing, NotCollectingButShowing] }
-  
+
   validates_uniqueness_of :user_name, :case_sensitive => false
 
   comma do

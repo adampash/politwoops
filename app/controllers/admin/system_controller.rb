@@ -5,7 +5,7 @@ class Admin::SystemController < Admin::AdminController
     # Checks heartbeat files found in the configuration.
     # If the file exists and the timestamp is current, the worker
     # is running and can be restarted via the web interface.
-    # If the file is missing (the worker failed to restart) or the 
+    # If the file is missing (the worker failed to restart) or the
     # file exists but the timestamp is old (the process exited abnormally)
     # then the process will have to be restarted by the admin.
 
@@ -15,7 +15,7 @@ class Admin::SystemController < Admin::AdminController
       exists = File.exists? path
       traceback = nil
       started = nil
-      if exists 
+      if exists
         begin
           heartbeat_contents = File.new(path).read()
           meta = JSON.parse(heartbeat_contents)
@@ -99,4 +99,3 @@ class Admin::SystemController < Admin::AdminController
     return redirect_to :action => "status"
   end
 end
-

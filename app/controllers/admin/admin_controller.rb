@@ -4,7 +4,7 @@ class Admin::AdminController < ApplicationController
   before_filter :admin_only
 
   protected
-  
+
   def admin_only
     request_url = URI.parse(request.url)
     status_json_path = url_for(:action => 'status',

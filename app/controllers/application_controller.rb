@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     I18n::Backend::Simple.send(:include, I18n::Backend::Flatten)
     I18n.locale = "en"
   end
-  
+
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
