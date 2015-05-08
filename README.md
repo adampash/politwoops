@@ -1,3 +1,5 @@
+For local dev w/mysql, need to run mysql.server start
+
 Setting up the app
 ==================
 
