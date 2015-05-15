@@ -35,3 +35,11 @@ group :development do
   gem 'unicorn'
   gem 'debugger'
 end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'vcr'
+  gem 'pry'
+  gem 'webmock'
+end
