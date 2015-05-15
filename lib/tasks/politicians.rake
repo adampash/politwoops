@@ -98,8 +98,9 @@ namespace :politicians do
     links = []
     usernames = {}
 
+    i = 0
     CSV.foreach(ENV['CSV'], :col_sep => separator) do |row|
-
+      puts "#{i += 1}: #{row[2]}"
       #skip header row if it exists
       if row[0] == 'First Name' then
         next
