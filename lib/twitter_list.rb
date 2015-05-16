@@ -16,7 +16,7 @@ module TwitterList
     i = 0
     while true
       puts "#{i += 1}"
-      members = Twitter::list_members("BuzzFeed", "buzzfeed-editorial", options)
+      members = Twitter::list_members(username, list, options)
       members.attrs[:users].each do |user|
         users.push(parse_user user)
       end
