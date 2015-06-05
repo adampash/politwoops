@@ -50,4 +50,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # require httpbasic user/pass always
+  before_filter :admin_only
+
+  protected
+
+  def admin_only
+    authenticate_or_request_with_http_basic do |username, password|
+      username == Settings[:admin][:username] and password == Settings[:admin][:password]
+    end
+  end
+
+
 end
